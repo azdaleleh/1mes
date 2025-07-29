@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ⏱️ Contador desde 30/06/2025 às 18:00
-  const startDate = new Date("2025-06-30T18:00:00");
+  const startDate = new Date("2025-06-30T00:00:00-03:00");
 
   function updateCounter() {
     const now = new Date();
