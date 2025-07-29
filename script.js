@@ -73,8 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
     return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   }
 
-  // ⏱️ Contador desde 30/06/2025 às 18:00
-  const startDate = new Date("2025-06-30T00:00:00-03:00");
+  // ⏱️ Contador desde 30/06/2025 às 00:00 (horário de Brasília)
+const startDate = new Date("2025-06-30T00:00:00-03:00");
+
 
   function updateCounter() {
     const now = new Date();
