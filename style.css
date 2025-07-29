@@ -1,0 +1,242 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #ffeaf5);
+  color: #333;
+  overflow-x: hidden;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffc0cb, #ffe4ec);
+}
+
+.hidden {
+  display: none !important;
+}
+
+#start-button {
+  padding: 20px 40px;
+  font-size: 1.6rem;
+  border-radius: 20px;
+  background: #ff69b4;
+  border: none;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#start-button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 10.01%);
+  background-size: 10% 10%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+#start-button:active::after {
+  opacity: 1;
+  transition: opacity 0s;
+}
+
+.player-panel,
+.counter-panel {
+  max-width: 90%;
+  background: #ffb6c1;
+  border-radius: 20px;
+  margin: 30px auto 20px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  font-family: 'Quicksand', sans-serif;
+}
+
+.title {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.player-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cover {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.music-data {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.music-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.music-artist {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+#progress-bar {
+  flex: 1;
+  accent-color: #ff4fa3;
+  height: 4px;
+}
+
+#play-pause {
+  background: #fff;
+  border: none;
+  color: #ff4fa3;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4081;
+}
+
+/* 🖼️ Galeria manual com setas */
+.gallery-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+  gap: 20px;
+  max-width: 100%;
+  flex-wrap: nowrap;
+}
+
+.gallery-arrow {
+  background: #fff;
+  border: none;
+  color: #ff69b4;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+  transition: background 0.3s;
+}
+
+.gallery-arrow:hover {
+  background: #ffe4ec;
+}
+
+#current-photo {
+  max-width: 90%;
+  max-height: 320px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: white;
+  object-fit: contain;
+}
+
+/* 🕒 Texto fora do painel rosa */
+.counter-label {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 40px;
+  margin-bottom: -10px;
+}
+
+/* NOVO: Estiliza o título "Estamos juntos há" centralizado */
+.counter-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 40px;
+  margin-bottom: -10px;
+}
+
+.counter {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 30px auto 40px;
+  background: #ffb6c1;
+  border-radius: 20px;
+  max-width: 90%;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* NOVO: Centraliza galeria de fotos */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.love-message {
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  font-size: 2.4rem;
+  color: #e75480;
+  padding: 0 15px 60px;
+  line-height: 1.4;
+  text-shadow: 1px 1px 4px rgba(255, 192, 203, 0.5);
+}
+
+/* ✨ Brilhinhos */
+.sparkle {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, #ff80ab 80%);
+  pointer-events: none;
+  animation: sparkle-fade 1s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes sparkle-fade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}

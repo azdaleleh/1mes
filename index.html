@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>1 mês com Letícia 💖</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Tela inicial com botão -->
+  <div id="start-screen" class="center">
+    <button id="start-button">Clique aqui 💖</button>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div id="content" class="hidden">
+
+    <!-- Player de música -->
+    <div class="player-panel">
+      <span class="title">Ouvindo</span>
+      <div class="player-info">
+        <img src="imagens/capa.png" alt="Capa da música" class="cover"/>
+        <div class="music-data">
+          <div class="music-title">Aliança</div>
+          <div class="music-artist">Tribalistas</div>
+          <div class="controls">
+            <span id="current-time">00:00</span>
+            <input type="range" id="progress-bar" value="0"/>
+            <span id="duration">00:00</span>
+          </div>
+        </div>
+        <button id="play-pause">▶️</button>
+      </div>
+    </div>
+
+    <!-- Galeria de fotos com setas -->
+    <h2 class="section-title">Momentos</h2>
+    <div class="carousel-container">
+      <button class="carousel-btn" id="prev-photo">←</button>
+      <img id="current-photo" class="carousel-photo" src="fotos/foto1.png" alt="Foto de nós dois" />
+      <button class="carousel-btn" id="next-photo">→</button>
+    </div>
+
+    <!-- Contador de tempo -->
+    <h3 class="counter-title">Estamos juntos há</h3>
+    <div class="counter">
+      <span id="time-counter"></span> 💘
+    </div>
+
+    <!-- Mensagem de amor -->
+    <div class="love-message">
+      "hoje estamos completando nosso primeiro mês juntos e tem sido maravilhoso ter você do meu lado! Queria dizer que você é com certeza a pessoa mais especial que eu conheci em toda minha vida e te agradecer por literalmente tudo ... Quem diria que em tão pouco tempo já teríamos passado por tanta coisa e ter milhares e milhares de histórias pra contar. Eu sou apaixonado em cada detalhe seu e por incrível que pareça eu consigo amar até os seus defeitos. enfim, que esse seja o primeiro de muitos meses que vou passar ao seu lado e saiba que distância nenhuma irá fazer eu desistir de você. E já que a nossa felicidade incomoda tanto, vamos cuidar de ser ainda mais felizes e incomodar muito mais! 
+
+
+
+      Com você, cada dia é um sonho diferente. Te amo, Letícia 💗"
+    </div>
+  </div>
+
+  <!-- Áudio -->
+  <audio id="audio" src="audio/alianca.mp3"></audio>
+
+  <!-- Brilhinhos globais -->
+  <script>
+    document.body.addEventListener('click', function (e) {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.left = `${e.clientX}px`;
+      sparkle.style.top = `${e.clientY}px`;
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 1000);
+    });
+  </script>
+
+  <!-- JS principal -->
+  <script src="script.js" defer></script>
+</body>
+</html>
